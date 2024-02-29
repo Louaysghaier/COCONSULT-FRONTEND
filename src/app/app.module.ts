@@ -23,6 +23,7 @@ import { HomeComponent } from './home';
         AppComponent,
         AlertComponent,
         HomeComponent
+        
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
