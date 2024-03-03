@@ -11,6 +11,8 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
 import { HomeComponent } from './home';
+import { DisplayimageComponent } from './displayimage/displayimage.component';
+import { ShowimgComponent } from './showimg/showimg.component';
 
 @NgModule({
     imports: [
@@ -22,7 +24,9 @@ import { HomeComponent } from './home';
     declarations: [
         AppComponent,
         AlertComponent,
-        HomeComponent
+        HomeComponent,
+        DisplayimageComponent,
+        ShowimgComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

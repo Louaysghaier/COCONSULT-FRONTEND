@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
         private alertService: AlertService
     ) { }
 
-    ngOnInit() {
+    ngOnInit () {
         this.form = this.formBuilder.group({
             firstName: ['', Validators.required],
             lastName: ['', Validators.required],

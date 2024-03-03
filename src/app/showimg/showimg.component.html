@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let theme of themes">
+        <div class="card mb-4">
+          <img [src]="'http://localhost:8082/images/' + theme.image" alt="Theme Image" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{ theme.type }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

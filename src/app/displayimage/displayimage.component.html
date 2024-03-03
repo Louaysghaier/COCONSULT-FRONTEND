@@ -1,0 +1,17 @@
+<form [formGroup]="themeForm" (ngSubmit)="onSubmit()" class="theme-form">
+    <div class="form-group">
+      <label for="type">Type:</label>
+      <input type="text" class="form-control" id="type" formControlName="type">
+      <div *ngIf="themeForm?.get('type')?.invalid && themeForm?.get('type')?.touched" class="text-danger">
+        Type is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="image">Image:</label>
+      <input type="file" (change)="onFileChange($event)" class="form-control" id="image" formControlName="image">
+      <div *ngIf="themeForm?.get('image')?.invalid && themeForm?.get('image')?.touched" class="text-danger">
+        Image is required
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
